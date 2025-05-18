@@ -29,7 +29,28 @@ goHome.addEventListener('click', function() {
 
 const buttonNoConfirmTransfer = document.querySelector('#buttonNoConfirmTransfer'); 
 
-divElement.addEventListener('click', function() {
-  window.location.href = 'MakeATransfer.html'; 
+buttonComfirmAndTransfer.addEventListener('click', function () {
+  // Create the popup
+  const popup = document.createElement("div");
+  popup.textContent = "✅ Transfer Complete!";
+  popup.style.position = "fixed";
+  popup.style.top = "50%";
+  popup.style.left = "50%";
+  popup.style.transform = "translate(-50%, -50%)";
+  popup.style.background = "#0F559B";
+  popup.style.color = "white";
+  popup.style.padding = "20px 30px";
+  popup.style.borderRadius = "10px";
+  popup.style.boxShadow = "0 2px 10px rgba(0,0,0,0.3)";
+  popup.style.zIndex = "1000";
+  popup.style.fontSize = "1.2rem";
+
+  document.body.appendChild(popup);
+
+  // Wait 3 seconds then redirect
+  setTimeout(() => {
+    popup.remove(); // optional: clean up
+    window.location.href = "index.html";
+  }, 3000);
 });
 
