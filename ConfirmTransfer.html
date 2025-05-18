@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ConfirmTransfer</title>
+  <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+  <header>
+    <div class="headerContainer">
+      <h3 class="headerText">
+        Transfer
+      </h3>
+      <div class="headerImage">
+        <img src="./images/ProfileIcon.svg" alt="ProfileIcon">
+      </div>
+    </div>
+  </header>
+
+  <div class="transferInfoContainer">
+    <h2 class="transferInfoTitle">Sender</h2>
+    <h1 class="transferInfoConfirm" id="selectedAccount"></h1>
+    <h2 class="transferInfoTitle">Recipient</h2>
+    <h1 class="transferInfoConfirm" id="selectedRecipient"></h1>
+  </div>
+
+  <div class="transferInfoContainer">
+    <h2 class="transferInfoTitle">Amount</h2>
+    <h1 class="transferInfoConfirm" id="selectedAmount"></h1>
+    <h2 class="transferInfoTitle">Title</h2>
+    <h2 class="transferInfoConfirmSmall" id="selectedTitle"></h2> 
+    <h2 class="transferInfoTitle">Scheduled for</h2>
+    <h1 class="transferInfoConfirm" id="selectedDate"></h1>
+
+  </div>
+
+  <div class="transferInfoContainer">
+    <h2 class="transferInfoTitle">Recurring every</h2>
+    <h1 class="transferInfoConfirm" id="selectedRecurrance"></h1>
+  </div>
+
+  <div class="buttonsTransfer">
+    <div class="buttonCancel" id="buttonNoConfirmTransfer">Cancel</div>
+    <div class="buttonProceed" id="buttonComfirmAndTransfer">Confirm and transfer</div> 
+  </div>
+
+
+   
+   <footer>
+    <div id="navBar">
+      <div class="navItem" id="goHomeNavButton">
+        <img class="navIcon" src="./images/HomeIcon.svg" alt="Navigate to home">
+        <h3 class="navText">Home</h3>
+      </div>
+
+      <div class="navItem">
+        <img class="navIcon" src="./images/AccountsIcon.svg" alt="Navigate to accounts">
+        <h3 class="navText">Accounts</h3>
+      </div>
+
+      <div class="navItem" id="transferNavButton">
+        <img class="navIcon" src="./images/transferIconBlue.svg" alt="Navigate to transfers">
+        <h3 class="navText" style="color: #0F559B;">Transfer</h3>
+      </div>
+
+      <div class="navItem">
+        <img class="navIcon" src="./images/CardsIcon.svg" alt="Navigate to Cards">
+        <h3 class="navText">Cards</h3>
+      </div>
+
+      <div class="navItem">
+        <img class="navIcon" src="./images/SpendingIcon.svg" alt="NAvigate to spending">
+        <h3 class="navText">Spending</h3>
+      </div>
+       
+      
+    </div> 
+  </footer>
+  
+  
+  <script src="js/ConfirmTransfer.js">
+  </script>
+</body>
+</html>

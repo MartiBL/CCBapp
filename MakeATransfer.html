@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MakeATransfer</title>
+  <link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+  <header>
+    <div class="headerContainer">
+      <h3 class="headerText">
+        Transfer
+      </h3>
+      <div class="headerImage">
+        <img src="./images/ProfileIcon.svg" alt="ProfileIcon">
+      </div>
+    </div>
+  </header>
+
+
+  <div class="transferInfoContainer"> <!-- So I am making a container like in the design file and in it there will be a drop down and a textbox-->
+    <h2 class="transferInfoTitle">Sender</h2>
+      <label for="accountSelect"></label>
+        <select id="accountSelect" class="accountDropdown">
+          <option value="My Account" selected>My account</option>
+          <option value="Emergency Account">Emergency account</option>
+        </select>
+    <h2 class="transferInfoTitle">Recipient(IBAN)</h2>
+        <label for="recipientIBAN"></label>
+        <input type="text" id="recipientIBAN" name="recipientIBAN">
+  </div>
+   
+  <div class="transferInfoContainer"> <!-- Here it gets a bit more complicated because I am making a subcontainer so I can have an input field and a drop down in the same div-->
+     <h2 class="transferInfoTitle">Amount</h2>
+        <div class="transferInfoSubContainer"> <!--But I am also making a sub sub container becuase I want to put the input field and the drop down in each respectively so I can flex them-->
+            <div class="transferInfoSubSubContainer">
+                <label for="amountTransfer"></label>
+                <input type="number" id="amountTransfer" name="amountTransfer">
+            </div>
+            <div class="transferInfoSubSubContainer">
+                <select id="currencySelect" class="currencyDropdown">
+                     <option value="BGN(BG)" selected>BGN(BG)</option>
+                     <option value="EUR(EU)">EUR(EU)</option>
+                     <option value="USD(US)">USD(US)</option>
+                     <option value="GBP(UK)">GBP(UK)</option>
+                </select>
+            </div>
+        </div>
+
+     <h2 class="transferInfoTitle">Title</h2>  
+        <label for="titleTransfer"></label>
+        <input type="text" id="titleTransfer" name="titleTransfer">
+
+     <h2 class="transferInfoTitle">Schedule for</h2>
+        <label for="datePicker"></label>
+        <input type="date" id="datePicker" class="dateBox">
+     
+     <h2 class="transferInfoTitle">Make recurring</h2>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+  </div>
+
+  <div class="transferInfoContainer" id="recurranceContainer">
+    <h2 class="transferInfoTitle">Send every</h2>
+     <div class="transferInfoSubContainer"> 
+            <div class="transferInfoSubSubContainer">
+                <label for="reccurrance"></label>
+                <input type="number" id="recurrance" name="recurrance">
+            </div>
+            <div class="transferInfoSubSubContainer">
+                <select id="timeSelect" class="timeDropdown">
+                     <option value="Days" selected>Days</option>
+                     <option value="Weeks">Weeks</option>
+                     <option value="Months">Months</option>
+                     <option value="Years">Years</option>
+                </select>
+            </div>
+        </div>
+  </div>
+
+  <div class="buttonsTransfer">
+    <div class="buttonCancel" id="buttonCancelTransfer">Cancel</div>
+    <div class="buttonProceed" id="buttonContinueTransfer">Continue</div> 
+  </div>
+
+  <footer>
+    <div id="navBar">
+      <div class="navItem" id="goHomeNavButton">
+        <img class="navIcon" src="./images/HomeIcon.svg" alt="Navigate to home">
+        <h3 class="navText">Home</h3>
+      </div>
+
+      <div class="navItem">
+        <img class="navIcon" src="./images/AccountsIcon.svg" alt="Navigate to accounts">
+        <h3 class="navText">Accounts</h3>
+      </div>
+
+      <div class="navItem" id="transferNavButton">
+        <img class="navIcon" src="./images/transferIconBlue.svg" alt="Navigate to transfers">
+        <h3 class="navText" style="color: #0F559B;">Transfer</h3>
+      </div>
+
+      <div class="navItem">
+        <img class="navIcon" src="./images/CardsIcon.svg" alt="Navigate to Cards">
+        <h3 class="navText">Cards</h3>
+      </div>
+
+      <div class="navItem">
+        <img class="navIcon" src="./images/SpendingIcon.svg" alt="NAvigate to spending">
+        <h3 class="navText">Spending</h3>
+      </div>
+       
+      
+    </div> 
+  </footer>
+  
+  
+  <script src="js/MakeATransfer.js">
+  </script>
+</body>
+</html>
